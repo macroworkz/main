@@ -4,6 +4,7 @@ Created on Thu Aug 25 19:29:37 2022
 class based intracen scraper
 @author: bluesky
 """
+#children processes called from 
 from selenium import webdriver
 import time
 import pandas as pd
@@ -16,9 +17,9 @@ import warnings
 import json
 import random
 
-
+#Useless warnings closed
 warnings.filterwarnings("ignore")
-
+# for data sharing these 2 are necessary
 sys.stdin = sys.stdin.detach()
 sys.stdout = sys.stdout.detach()
 
@@ -33,6 +34,7 @@ d['goog:loggingPrefs'] = { 'browser':'ALL' }
 time.sleep(1)
 driver = webdriver.Chrome(executable_path='C:/Users/bluesky/Desktop/chromedriver/chromedriver.exe')
 # driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+#when it is working webdriver execution time needs to be defined
 driver.set_script_timeout(90)
 # path_to_file='C:/Users/bluesky/Desktop/chromedriver/countrycode.txt'
 # with open(path_to_file) as fe:
